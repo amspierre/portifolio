@@ -121,6 +121,76 @@
           height: min(340px, 76vw);
         }
       }
+
+      /* Skills: vertical list, rounded blue progress, blue shadow */
+      .skills-list {
+        width: 100%;
+        max-width: none;
+        padding: 0 1rem; /* match card inner padding */
+        margin-left: auto;
+        margin-right: auto;
+        text-align: left;
+      }
+      .skill { margin-bottom: 1.25rem; }
+      .skill .skill-title { font-weight: 700; color: #ffffff; }
+      .skill .skill-meta { color: #cbd5e1; font-size: 0.95rem; }
+      .skill-progress {
+        width: 100%;
+        height: 14px;
+        background-color: rgba(255,255,255,0.04);
+        border-radius: 999px;
+        overflow: hidden;
+        box-shadow: inset 0 -3px 8px rgba(0,0,0,0.45);
+      }
+      .skill-progress .progress-bar {
+        border-radius: 999px;
+        box-shadow: 0 10px 28px rgba(13,110,253,0.30);
+      }
+
+      /* Certifications & Study cards */
+      .certs-section .cert-card {
+        background: rgba(255,255,255,0.02);
+        border-radius: .75rem;
+        padding: 1rem;
+        box-shadow: 0 10px 30px rgba(2,6,23,0.6), 0 0 20px rgba(13,110,253,0.06);
+      }
+      .certs-section .cert-card h3 { margin: 0 0 .25rem 0; color: #ffffff; font-size: 1rem; }
+      .accent-blue { color: #0d6efd; font-weight: 700; }
+      .badge-type { background: rgba(255,255,255,0.03); color:#cbd5e1; padding:.25rem .5rem; border-radius:.5rem; font-size:.8rem; display:inline-block; }
+      .badge-status { padding:.25rem .5rem; border-radius:.5rem; font-size:.8rem; font-weight:600; display:inline-block; }
+      .status-concluido { background: rgba(13,110,253,0.12); color:#0d6efd; }
+      .status-em-andamento { background: rgba(255,193,7,0.12); color:#ffc107; }
+
+      /* Download button for completed certificates */
+      .btn-download {
+        display: inline-flex;
+        align-items: center;
+        gap: .5rem;
+        padding: .35rem .6rem;
+        border-radius: .5rem;
+        border: 1px solid rgba(13,110,253,0.18);
+        color: #0d6efd;
+        background: transparent;
+        box-shadow: 0 8px 24px rgba(13,110,253,0.12);
+        text-decoration: none;
+        font-weight: 600;
+        font-size: .9rem;
+      }
+      .btn-download:hover {
+        background: rgba(13,110,253,0.06);
+        color: #0b5ed7;
+        text-decoration: none;
+        box-shadow: 0 12px 32px rgba(13,110,253,0.16);
+      }
+
+      @media (max-width: 576px) {
+        /* Stack card meta under description on small screens */
+        .cert-card > .d-flex { flex-direction: column; gap: .75rem; align-items: flex-start; }
+        .cert-card .text-end { text-align: left; margin-top: .5rem; }
+        .cert-card .badge-type b, .cert-card .badge-status b { font-weight: 700; }
+        .cert-card .btn-download { margin-top: .5rem; }
+      }
+
     </style>
   </head>
   <body>
@@ -268,7 +338,127 @@
         </div>
       </div>
     </div>
-    
+
+    <!-- SKILLS -->
+     <div class="hero-dark px-4 py-5 text-center">
+      <div class="py-5">
+        <h1 class="display-5 fw-bold text-white">Skills</h1>
+        <div class="col-lg-6 mx-auto">
+          <div class="skills-list">
+            <div class="skill">
+              <div class="d-flex justify-content-between mb-1">
+                <div class="skill-title">C</div>
+                <div class="skill-meta">80%</div>
+              </div>
+              <div class="progress skill-progress" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
+                <div class="progress-bar bg-primary" style="width:80%"></div>
+              </div>
+            </div>
+
+            <div class="skill">
+              <div class="d-flex justify-content-between mb-1">
+                <div class="skill-title">HTML</div>
+                <div class="skill-meta">95%</div>
+              </div>
+              <div class="progress skill-progress" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">
+                <div class="progress-bar bg-primary" style="width:95%"></div>
+              </div>
+            </div>
+
+            <div class="skill">
+              <div class="d-flex justify-content-between mb-1">
+                <div class="skill-title">CSS</div>
+                <div class="skill-meta">90%</div>
+              </div>
+              <div class="progress skill-progress" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
+                <div class="progress-bar bg-primary" style="width:90%"></div>
+              </div>
+            </div>
+
+            <div class="skill">
+              <div class="d-flex justify-content-between mb-1">
+                <div class="skill-title">JavaScript</div>
+                <div class="skill-meta">75%</div>
+              </div>
+              <div class="progress skill-progress" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                <div class="progress-bar bg-primary" style="width:75%"></div>
+              </div>
+            </div>
+
+            <div class="skill">
+              <div class="d-flex justify-content-between mb-1">
+                <div class="skill-title">Java</div>
+                <div class="skill-meta">80%</div>
+              </div>
+              <div class="progress skill-progress" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
+                <div class="progress-bar bg-primary" style="width:80%"></div>
+              </div>
+            </div>
+
+            <div class="skill">
+              <div class="d-flex justify-content-between mb-1">
+                <div class="skill-title">SQL</div>
+                <div class="skill-meta">60%</div>
+              </div>
+              <div class="progress skill-progress" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">
+                <div class="progress-bar bg-primary" style="width:60%"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Certifications & Studies Subsection -->
+          <div class="certs-section mt-4">
+            <h2 class="h5 text-white mb-3">Certificações e Estudo</h2>
+            <div class="d-grid gap-3">
+
+              <div class="cert-card">
+                <div class="d-flex justify-content-between align-items-start">
+                  <div>
+                    <h3 class="h6 mb-1"><span class="accent-blue">Lógica</span> de programação e banco de dados</h3>
+                    <p class="mb-2 text-secondary small">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent commodo justo a tortor consequat, sit amet.</p>
+                  </div>
+                  <div class="text-end">
+                    <div class="badge-type"><b>profissionalizante</b></div>
+                    <div class="badge-status status-concluido mt-2"><b>Concluído</b></div>
+                    <a class="btn-download mt-3" href="./assets/certs/logica-programacao.pdf" download target="_blank" rel="noopener noreferrer" title="Download do certificado"><i class="bi bi-download" aria-hidden="true"></i> Baixar</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="cert-card">
+                <div class="d-flex justify-content-between align-items-start">
+                  <div>
+                    <h3 class="h6 mb-1"><span class="accent-blue">Desenvolvimento</span> de sistemas</h3>
+                    <p class="mb-2 text-secondary small">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id faucibus urna, quis tristique nunc.</p>
+                  </div>
+                  <div class="text-end">
+                    <div class="badge-type"><b>técnico</b></div>
+                    <div class="badge-status status-em-andamento mt-2"><b>Em andamento</b></div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="cert-card">
+                <div class="d-flex justify-content-between align-items-start">
+                  <div>
+                    <h3 class="h6 mb-1">Inteligencia artificial e <span class="accent-blue">ChatGPT</span></h3>
+                    <p class="mb-2 text-secondary small">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc non facilisis dictum, urna.</p>
+                  </div>
+                  <div class="text-end">
+                    <div class="badge-type"><b>treinamento</b></div>
+                    <div class="badge-status status-concluido mt-2"><b>Concluído</b></div>
+                    <a class="btn-download mt-3" href="./assets/certs/ia-chatgpt.pdf" download target="_blank" rel="noopener noreferrer" title="Download do certificado"><i class="bi bi-download" aria-hidden="true"></i> Baixar</a>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
