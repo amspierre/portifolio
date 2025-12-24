@@ -21,6 +21,9 @@
         color: #0d6efd;
       }
 
+      /* Page background: ensure scroll shows same dark color */
+      html, body { background-color: #0b1220; color: #f8f9fa; min-height: 100%; }
+
       /* Make navbar match hero dark background */
       .navbar {
         background-color: #0b1220 !important;
@@ -746,6 +749,27 @@
       .footer-link:hover { text-decoration: underline; color: #fff; }
       .site-footer small { color: rgba(203,213,225,0.6); }
       @media (max-width:576px){ .site-footer { padding-left:1rem; padding-right:1rem; } .footer-socials{ flex-direction:column; gap:.6rem; } }
+
+      /* Custom scrollbar to match dark theme */
+      html { scroll-behavior: smooth; scrollbar-width: auto; scrollbar-color: #0d6efd transparent; }
+
+      /* WebKit-based browsers (Chrome, Edge, Safari) */
+      ::-webkit-scrollbar { width: 16px; height: 16px; }
+      /* Fully transparent track and pieces to show page background */
+      ::-webkit-scrollbar-track { background: transparent; }
+      ::-webkit-scrollbar-track-piece { background: transparent; }
+      ::-webkit-scrollbar-corner { background: transparent; }
+      ::-webkit-scrollbar-thumb {
+        background: linear-gradient(180deg,#2d8bff,#0d6efd);
+        border-radius: 999px;
+        border: 3px solid rgba(11,18,32,0.0);
+        box-shadow: 0 6px 18px rgba(13,110,253,0.12), inset 0 0 0 1px rgba(255,255,255,0.02);
+      }
+      ::-webkit-scrollbar-thumb:hover { background: linear-gradient(180deg,#3ea0ff,#2d8bff); }
+
+      /* Small refinement for thin screens */
+      @media (max-width:576px){ ::-webkit-scrollbar { width:14px } }
+
     </style>
 
   </body>
