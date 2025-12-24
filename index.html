@@ -720,5 +720,32 @@
         }
       })();
     </script>
+
+    <!-- SITE FOOTER -->
+    <footer class="site-footer py-5">
+      <div class="container text-center">
+        <div class="footer-brand mb-2"><h5 class="mb-0">Ams Pierre</h5></div>
+        <div class="footer-socials d-flex gap-3 justify-content-center align-items-center">
+          <a class="footer-link" href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="bi bi-github"></i> GitHub</a>
+          <a class="footer-link" href="https://instagram.com/yourusername" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="bi bi-instagram"></i> Instagram</a>
+          <a class="footer-link" href="https://wa.me/5549988626257" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i> WhatsApp</a>
+        </div>
+        <small class="d-block text-muted mt-3">© 2025 Ams Pierre</small>
+      </div>
+    </footer>
+
+    <style>
+      /* Footer styles aligned with page theme */
+      .site-footer { background: #0b1220; color: #cbd5e1; border-top: 1px solid rgba(255,255,255,0.03); }
+      .site-footer .container { max-width: 1100px; }
+      .footer-brand h5 { color: #fff; font-weight:800; letter-spacing:0.3px; }
+      .footer-socials { margin-top: .5rem; }
+      .footer-link { color: #cbd5e1; text-decoration: none; padding: 0 .5rem; display:inline-flex; align-items:center; gap:.45rem; font-weight:600; background: transparent; border: none; }
+      .footer-link .bi { margin-right: .4rem; color: #cbd5e1; font-size: 1rem; opacity: 0.95; }
+      .footer-link:hover { text-decoration: underline; color: #fff; }
+      .site-footer small { color: rgb(255, 255, 255); }
+      @media (max-width:576px){ .site-footer { padding-left:1rem; padding-right:1rem; } .footer-socials{ flex-direction:column; gap:.6rem; } }
+    </style>
+
   </body>
 </html>
